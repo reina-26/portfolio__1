@@ -2,14 +2,9 @@
 //hamberger
 //-------------------------------------------
 
-(function () {
-  const body = document.querySelector('body');
-  const btn = document.querySelector('.hamburger');
-
-  function toggleClass() {
-    body.classList.toggle('active');
-    body.classList.toggle('noscroll');
-  }
-
-  btn.addEventListener('click', toggleClass);
-})();
+//ハンバーガーメニューの開閉
+$('.hamburger').on('click', function () {
+  $('.nav').fadeToggle(300);
+  $('.nav-button').toggleClass('cross');
+  $('body').toggleClass('noscroll');
+});
